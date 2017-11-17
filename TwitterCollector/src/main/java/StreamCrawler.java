@@ -50,7 +50,7 @@ public class StreamCrawler {
 
     public static void main(String args[]) {
         try {
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 10; i++) {
                 long start = System.currentTimeMillis();
                 StreamCrawler streamCrawler = new StreamCrawler();
                 streamCrawler.start();
@@ -129,7 +129,7 @@ public class StreamCrawler {
 
             @Override
             public void onDeletionNotice(StatusDeletionNotice arg0) {
-                // TODO Auto-generated method stub
+
 
             }
 
@@ -140,13 +140,11 @@ public class StreamCrawler {
 
             @Override
             public void onStallWarning(StallWarning arg0) {
-                // TODO Auto-generated method stub
                 System.out.println(arg0);
             }
 
             @Override
             public void onTrackLimitationNotice(int arg0) {
-                // TODO Auto-generated method stub
                 System.out.println(arg0);
             }
 

@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,17 +9,18 @@ import java.util.Date;
  */
 
 
-//file format testing, checking if each record is ended with /n and if each attribute is splitted by /t
+//file format testing, checking if each record is ended with /n and if each attribute is splited by /t
 public class Test {
-
 
     public static void main(String[] args) {
         try {
-            File file = new File("tweets.txt");
-            FileReader fileReader = new FileReader(file);
+            File sourceFile = new File("data/tweets.txt");
+            File targetFile = new File("output.csv");
+            FileWriter fileWriter = new FileWriter(targetFile);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            FileReader fileReader = new FileReader(sourceFile);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
-            int count = 0;
 
             while ((line = bufferedReader.readLine()) != null) {
                 String[] arr = line.split("\\t");
@@ -33,10 +32,10 @@ public class Test {
                 Date createdDate = dateFormat.parse(createdDateString);
                 String text = arr[4];
                 String userId = arr[5];
-                count++;
+                System.out.println(latitude + " " + longitude);
+                bufferedWriter.write(latitude + "," + longitude + "\n");
             }
             fileReader.close();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
