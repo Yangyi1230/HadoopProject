@@ -3,7 +3,7 @@
  * VADER is a sub-package in Python library NLTK.
  * Here we use a java version of VADER, which enabled us to perform a MapReduce on Twitter data.
  * 
- * ********************************************CDEDITS*******************************************
+ * ********************************************CREDITS*******************************************
  * This file is modified based on Nuno A. C. Henriques's project [nunoachenriques.net]
  * 
  * This project is the java version of Hutto's Python project VADER
