@@ -36,20 +36,20 @@ Describe the usage here(@Shiyao Lei)
 TwitterSentiment contains two parts:
 1. Build python package VADER in java, and create a UDF in Hive.
 
-**How to run?** 
+	**How to run?** 
 
 	cd ($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment
 
 	./compileAndPack.sh
 
-Then the .jar package which contains sentiment module will be on HDFS 
+	Then the .jar package which contains sentiment module will be on HDFS 
 
-1. A Hive SQL command file that perform sentiment analytic on tweets, and calcualte the
+2. A Hive SQL command file that perform sentiment analytic on tweets, and calcualte the
 normalized average happyness polarity on differenct workdays an different day hours.
 
-**How to run?**
+	**How to run?**
 
-Run ``($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment/sentiment_hive_command.sql'' using Hive.
+	Run ``($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment/sentiment_hive_command.sql'' using Hive.
 
 ##### TwitterAnalyzer:
 
