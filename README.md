@@ -13,8 +13,13 @@ The project contains three parts of codes:
 #### DataCollectParse: ($PROJECTROOT)/DataCollectParse
 
 ##### TwitterCollector:
+TwitterCollector is a tool used to collect tweets through Twitter Streamline API. 
+Specifically, only tweets posted at NYC with geolocation info will be collected. 
 
-Describe the usage here(@Hao Chen)
+**How to run?**
+The jar file is included in the TwitterCollector/artifact. 
+To run the collector, simply type `java -jar filename.jar`
+
 
 ##### 311Parser:
 
@@ -30,6 +35,10 @@ Describe the usage here(@Shiyao Lei)
 
 ##### TwitterAnalyzer:
 
-Describe the usage here(@Hao Chen)
+TwitterKmeans.scala includes codes that train model for tweets clusting based on geolocation info.
+
+**How to run?**
+Copy the code to the spark-shell.
+
 
 #### CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
