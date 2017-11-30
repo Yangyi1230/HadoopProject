@@ -10,7 +10,7 @@ Created by Shiyao Lei, Dayou Du, Hao Chen at New York University
 
 The project contains three parts of codes:
 
-#### DataCollectParse:$(PROJECTROOT)/DataCollectParse
+#### DataCollectParse: ($PROJECTROOT)/DataCollectParse
 
 ##### TwitterCollector:
 
@@ -24,7 +24,7 @@ Describe the usage here(@Shiyao Lei)
 
 
 
-#### SingleSourceAnalytic:$(PROJECTROOT)/SingleSourceAnalytic
+#### SingleSourceAnalytic: ($PROJECTROOT)/SingleSourceAnalytic
 
 ##### TwitterSentiment:
 
@@ -32,4 +32,4 @@ Describe the usage here(@Shiyao Lei)
 
 Describe the usage here(@Hao Chen)
 
-#### CombineAnalytic:$(PROJECTROOT)/CombineAnalytic
+#### CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
