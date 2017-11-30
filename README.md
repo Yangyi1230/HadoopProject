@@ -4,7 +4,15 @@ Created by Shiyao Lei, Dayou Du, Hao Chen at New York University
 
 ### Introduction
 
-
+Neighborhood quality has always been difficult to quantify. Tranditionally, 
+neighborhood quality are measured by using the data from housing survey and 
+urban development cusyomer satisfication survey. In this paper, we analyze 
+the neighborhood quality and livibility based on three data source which are 
+311 Service Requests, NYPD Complaint Data Historic and geolocation based twitter 
+sentiment analysis. Investifations of neighborhood quality often relate to 
+various indicators. Combining these three data with geological information 
+and foucusing mainly in three indicators which are safety, environment, and 
+residents' happiness level.
 
 ### Usage
 
@@ -34,11 +42,11 @@ Describe the usage here(@Shiyao Lei)
 ##### TwitterSentiment:
 
 TwitterSentiment contains two parts:
-1. Build python package VADER in java, and create a UDF in Hive.
+1. Build java version of the python package VADER, and create a UDF in Hive.
 
-	cd ($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment
+   `cd ($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment`
 
-	./compileAndPack.sh
+   `./compileAndPack.sh`
 
    Then the .jar package which contains sentiment module will be on HDFS 
 
