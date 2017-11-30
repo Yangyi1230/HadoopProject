@@ -33,6 +33,24 @@ Describe the usage here(@Shiyao Lei)
 
 ##### TwitterSentiment:
 
+TwitterSentiment contains two parts:
+1. Build python package VADER in java, and create a UDF in Hive.
+
+**How to run?** 
+
+	cd ($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment
+
+	./compileAndPack.sh
+
+Then the .jar package which contains sentiment module will be on HDFS 
+
+1. A Hive SQL command file that perform sentiment analytic on tweets, and calcualte the
+normalized average happyness polarity on differenct workdays an different day hours.
+
+**How to run?**
+
+Run ``($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment/sentiment_hive_command.sql'' using Hive.
+
 ##### TwitterAnalyzer:
 
 TwitterKmeans.scala includes codes that train model for tweets clusting based on geolocation info.
