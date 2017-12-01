@@ -66,5 +66,8 @@ TwitterKmeans.scala includes codes that train model for tweets clusting based on
 **How to run?**
 Copy the code to the spark-shell.
 
+##### NAME-OF-311-ANALYTIC(@Shiyao Lei)
+
+Describe the usage here(@Shiyao Lei)
 
 #### CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
