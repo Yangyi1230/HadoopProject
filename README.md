@@ -35,7 +35,10 @@ Describe the usage here(@Shiyao Lei)
 
 ##### NYCCrimeParser:
 
+NYCCrimeParser parse and wash the raw NYCCrime Data. Select the fields that we are interested in.
 
+**How to run?**
+Compile and run `NYCCrimeParser.java`, `NYCCrimeMapper.java` using Hadoop.
 
 #### SingleSourceAnalytic: ($PROJECTROOT)/SingleSourceAnalytic
 
@@ -52,6 +55,7 @@ TwitterSentiment contains two parts:
 
 2. A Hive SQL command file that perform sentiment analytic on tweets, and calcualte the
 normalized average happyness polarity on differenct workdays an different day hours.
+It also create a table which contains geolocation and sentiment score for further use.
 
    Run `($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment/sentiment_hive_command.sql` using Hive.
 

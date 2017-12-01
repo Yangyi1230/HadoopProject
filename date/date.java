@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class date extends UDF{
 	public String evaluate(String datetime) throws ParseException {
-		SimpleDateFormat f = new SimpleDateFormat("MM/DD/YYYY");
+		SimpleDateFormat f = new SimpleDateFormat("MM/dd/yyyy");
 		String[] weekDays = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 		Calendar cal = Calendar.getInstance();
 		Date dates = null;
