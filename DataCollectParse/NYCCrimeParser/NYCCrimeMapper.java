@@ -7,9 +7,17 @@ import org.apache.hadoop.mapreduce.Mapper;
 public class NYCCrimeMapper extends Mapper<LongWritable, Text, Text, Text>{
         public void map(LongWritable key, Text value, Context context)
                 throws IOException, InterruptedException{
-                String[] tokens = value.toString().split(",");
+                String[] tokens = (value.toString() + ",a").split(",");
                 String uniqueKey = tokens[0].trim();
-                String info = tokens[1].trim() + "	" + tokens[5].trim() + "	" + tokens[50].trim() + "	" + tokens[51].trim();
+		String date = tokens[1].trim();
+		String time = tokens[2].trim();
+		String latitude = tokens[21].trim();
+		String langitude = tokens[22].trim();
+		if(date.length() == 0 || time.length() == 0 || 
+			latitude.length() == 0 || langitude.length() == 0)return;
+		if(latitude.charAt(0) > '9' || latitude.charAt(0) < '0' || langitude.charAt(0) != '-')return;
+		String info = date + "	" + time + "	" +
+				latitude + "	"+ langitude;
 		context.write(new Text(uniqueKey), new Text(info));
         }
 }
