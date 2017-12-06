@@ -9,3 +9,5 @@ hdfs dfs -rm -r 311data/output2
 
 hadoop jar 311Parser.jar data 311data/311.csv 311data/output2
 
+rm 311Parser.jar
+
