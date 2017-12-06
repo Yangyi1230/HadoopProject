@@ -75,7 +75,7 @@ Describe the usage here(@Shiyao Lei)
 
 #### CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
 
-##### TwitterAnalyzer:
+##### TwitterClustering:
 
 TwitterKmeans.scala includes codes that train model for tweets clusting based on geolocation info.
 
