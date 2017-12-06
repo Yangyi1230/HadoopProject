@@ -16,7 +16,7 @@ residents' happiness level.
 
 ### Usage
 
-The project contains three parts of codes:
+The project contains four parts of codes:
 
 #### DataCollectParse: ($PROJECTROOT)/DataCollectParse
 
@@ -59,6 +59,22 @@ It also create a table which contains geolocation and sentiment score for furthe
 
    Run `($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment/sentiment_hive_command.sql` using Hive.
 
+   Note: to use the hive commands, please first run 
+
+##### NYCCrimeAnalyzer
+
+Analyze the relationship between the amount of NYC Crime complaints and 
+the specific day of one week or time in one day. 
+
+**How to run?**
+Run `($PROJECTROOT)/SingleSourceAnalytic/NYCCrimeAnalyzer/nyccrime_hive_command.sql` using Hive.
+
+##### 311Analyzer(@Shiyao Lei)
+
+Describe the usage here(@Shiyao Lei)
+
+#### CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
+
 ##### TwitterAnalyzer:
 
 TwitterKmeans.scala includes codes that train model for tweets clusting based on geolocation info.
@@ -66,8 +82,11 @@ TwitterKmeans.scala includes codes that train model for tweets clusting based on
 **How to run?**
 Copy the code to the spark-shell.
 
-##### NAME-OF-311-ANALYTIC(@Shiyao Lei)
 
-Describe the usage here(@Shiyao Lei)
+#### dateUDFs : ($PROJECTROOT)/DateUDFs
 
-#### CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
+Contains the common date related hive UDF functions.
+
+**How to run?**
+`cd ($PROJECTROOT)/DateUDFs`
+`./compileAndPack.sh`
