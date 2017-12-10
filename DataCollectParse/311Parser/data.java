@@ -1,3 +1,5 @@
+//Created by Nina Lei
+//Modified by Dayou DU on Nov 30th, 2017
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;

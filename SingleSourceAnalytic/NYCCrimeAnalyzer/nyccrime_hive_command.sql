@@ -1,3 +1,4 @@
+--Created by Dayou Du on Dec 4th, 2017
 drop table nycCrimeOri;
 
 create external table nycCrimeOri (id bigint, date string, time string , latitude double, longitude double)

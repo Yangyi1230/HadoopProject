@@ -1,3 +1,5 @@
+//Created by Dayou Du on Dec 5th, 2017
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.hive.ql.exec.UDF;
 import org.apache.hadoop.io.*;

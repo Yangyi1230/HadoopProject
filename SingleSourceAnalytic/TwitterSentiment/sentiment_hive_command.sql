@@ -1,3 +1,4 @@
+--Created by Dayou Du on Nov 10th, 2017
 drop table tweetori;
 
 create external table tweetOri (id bigint, latitude double, longitude double, time string, content string)

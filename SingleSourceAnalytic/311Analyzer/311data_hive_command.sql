@@ -1,3 +1,5 @@
+--Created by Nina Lei
+--Modified by Dayou Du on Dec 2th, 2017
 drop table 311complainTable;
 
 create external table 311complainTable (id bigint, time string, type string, latitude double, longitude double)

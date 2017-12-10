@@ -1,4 +1,5 @@
 #!/bin/sh
+#Created by Dayou Du on Nov 31st, 2017
 javac -classpath `yarn classpath`:. ./*.java
 
 jar -cvf NYCCrimeParser.jar ./*.class

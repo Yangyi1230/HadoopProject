@@ -1,4 +1,5 @@
 #!/bin/sh
+#Created by Dayou DU on Dec 1st, 2017
 javac -classpath `yarn classpath`:. ./*.java
 
 jar -cvf 311Parser.jar ./*.class

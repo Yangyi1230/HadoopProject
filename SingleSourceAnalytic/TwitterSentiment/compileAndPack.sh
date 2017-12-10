@@ -1,4 +1,5 @@
 #!/bin/bash
+#Created by Dayou Du on Nov 15th, 2017
 javac -classpath `yarn classpath`:.:\
 ./myUDF/sentiment:/usr/share/cmf/common_jars/hive-exec-1.1.0-cdh5.5.0.jar\
  ./myUDF/sentiment/EvalSentiment.java\

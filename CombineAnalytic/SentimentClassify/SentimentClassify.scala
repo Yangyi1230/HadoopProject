@@ -1,12 +1,11 @@
+//Created by Dayou Du on Dec 9th, 2017
+
 import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
 import org.apache.spark.mllib.linalg.Vectors
 
-// file format: latitude, longitude, score
 val data = sc.textFile("SparkInput/sentiment.csv")
 
 val dataArray = data.map(s => s.split(',').map(_.toDouble))
-
-// val parsedData = dataArray.map(s => Vectors.dense(s(1),(2),s(3))).cache()
 
 val model = KMeansModel.load(sc, "/user/dd2645/KMeansModel") 
 
