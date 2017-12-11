@@ -1,3 +1,4 @@
+--Created by Dayou Du on Nov 10th, 2017
 drop table tweetori;
 
 create external table tweetOri (id bigint, latitude double, longitude double, time string, content string)
@@ -13,11 +14,11 @@ drop function EvalSentiment;
 create function EvalSentiment as 'myUDF.sentiment.EvalSentiment'
 using JAR 'hdfs:///user/dd2645/sentiment.jar';
 
-drop table profiledtweet
+drop table profiledtweet;
 
 create table profiledtweet as
 select * from
-(select id, substr(time,0,3) weekday, substr(time,12,2) hour, EvalSentiment(content) sentiment from
+(select id, substr(time,0,3) weekday, substr(time,12,2) hour, EvalSentiment(content) sentiment, latitude, longitude from
 (select * from tweetori) tmp1
 ) tmp2
 where sentiment != 0;
@@ -25,7 +26,7 @@ where sentiment != 0;
 drop table normalizedtweet;
 
 create table normalizedtweet as
-select id, weekday, hour, sentiment/ stddev(sentiment) over () sentiment
+select id, weekday, hour, sentiment/ stddev(sentiment) over () sentiment, latitude, longitude
 from profiledtweet;
 
 select hour, AVG(sentiment) avg_sentiment from
@@ -36,4 +37,9 @@ select weekday, AVG(sentiment) avg_sentiment from
 normalizedtweet
 group by weekday;
 
+drop table TweetSentiGeo;
+
+create table TweetSentiGeo as
+select id, sentiment, latitude, longitude
+from normalizedtweet;
 
