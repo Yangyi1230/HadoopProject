@@ -82,6 +82,13 @@ TwitterKmeans.scala includes codes that train model for tweets clusting based on
 **How to run?**
 Copy the code to the spark-shell.
 
+##### ScoreGenerator
+This file include the code used to generated the final score for each clustering area.
+
+**How to run?**
+Compile and run `.java` file. (Need import *Apache Commons Mathematics Library*)
+
+
 
 #### dateUDFs : ($PROJECTROOT)/DateUDFs
 
@@ -90,3 +97,6 @@ Contains the common date related hive UDF functions.
 **How to run?**
 `cd ($PROJECTROOT)/DateUDFs`
 `./compileAndPack.sh`
+
+
+
