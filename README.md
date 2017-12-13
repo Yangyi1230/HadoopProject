@@ -1,4 +1,4 @@
-# Hadoop Group Project:Regional Happiness Index Assessment in New York City
+# Hadoop Group Project: Regional Happiness Index Assessment in New York City
 
 Created by Dayou Du, Shiyao Lei, Hao Chen at New York University
 
