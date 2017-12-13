@@ -133,11 +133,12 @@ Run corresponding .scala files in spark-shell.
 
 
 
-##### ScoreGenerator
-This file include the code used to generated the final score for each clustering area.
+##### Happiness Index Generator
+This file include the code used to generated the final regional happiness index value.
 
 **How to run?**
-Compile and run `.java` file. (Need import *Apache Commons Mathematics Library*)
+`java -jar ScoreGenerator-1.0-SNAPSHOT-shaded.jar`
+
 
 
 
