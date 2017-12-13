@@ -90,3 +90,12 @@ Contains the common date related hive UDF functions.
 **How to run?**
 `cd ($PROJECTROOT)/DateUDFs`
 `./compileAndPack.sh`
+
+### CREDITS
+
+The java version of VADER is based on Nuno A. C. Henriques's project [nunoachenriques.net]
+
+And also based on Hutto's original Python project VADER
+@see <a href="http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf">VADER:
+A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text</a>
+
