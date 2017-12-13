@@ -1,8 +1,8 @@
-## Hadoop Group Project:
+# Hadoop Group Project:
 
 Created by Shiyao Lei, Dayou Du, Hao Chen at New York University
 
-### Introduction
+## Introduction
 
 Neighborhood quality has always been difficult to quantify. Tranditionally, 
 neighborhood quality are measured by using the data from housing survey and 
@@ -17,17 +17,17 @@ residents' happiness level.
 
 
 
-### Usage
+## Usage
 
 The project contains four parts of codes:
 
 
 
 
-#### DataCollectParse: ($PROJECTROOT)/DataCollectParse
+## DataCollectParse: ($PROJECTROOT)/DataCollectParse
 
 
-##### 1.TwitterCollector:
+### 1.TwitterCollector:
 TwitterCollector is a tool used to collect tweets through Twitter Streamline API. 
 Specifically, only tweets posted at NYC with geolocation info will be collected. 
 
@@ -37,7 +37,7 @@ To run the collector, simply type `java -jar filename.jar`
 
 
 
-##### 2.311Parser:
+### 2.311Parser:
 
 Profile the row data and clean out the irrelevant data information. Extract the 
 unique key, created time, complaint type, longitude and latitude. Also filter 
@@ -51,7 +51,7 @@ out the transactions with missing fields.
 
 
 
-##### 3.NYCCrimeParser:
+### 3.NYCCrimeParser:
 
 profile the row data and clean out the irrelevant data information. Extract the 
 unique key, create date\&time, law category, longitude and latitude. Also filter 
@@ -66,9 +66,9 @@ out the transactions with missing fields.
 
 
 
-#### SingleSourceAnalytic: ($PROJECTROOT)/SingleSourceAnalytic
+## SingleSourceAnalytic: ($PROJECTROOT)/SingleSourceAnalytic
 
-##### 1.TwitterSentiment:
+### 1.TwitterSentiment:
 
 TwitterSentiment contains two parts:
 1. Build java version of the python package VADER, and create a UDF in Hive.
@@ -89,7 +89,7 @@ TwitterSentiment contains two parts:
 
 
 
-##### 2.NYCCrimeAnalyzer
+### 2.NYCCrimeAnalyzer
 
 Analyze the relationship between the amount of NYC Crime complaints and 
 the specific day of one week or time in one day. 
@@ -100,7 +100,7 @@ Run `($PROJECTROOT)/SingleSourceAnalytic/NYCCrimeAnalyzer/nyccrime_hive_command.
 
 
 
-##### 3.311Analyzer
+### 3.311Analyzer
 
 Analyze the relationship between the amount of 311Complaints and the specific day of one week, the time in one day and the location.
 
@@ -111,9 +111,9 @@ Run `($PROJECTROOT)/SingleSourceAnalytic/311Analyzer/311data_hive_command.sql` u
 
 
 
-#### CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
+## CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
 
-##### TwitterClustering:
+### TwitterClustering:
 
 TwitterKmeans.scala includes codes that train model for tweets clusting based on geolocation info.
 
@@ -125,7 +125,7 @@ Copy the code to the spark-shell.
 
 
 
-##### 311Classify, CrimeClassify, SentimentClassify
+### 311Classify, CrimeClassify, SentimentClassify
 
 Classify the profield data into the clusters generated above.
 
@@ -136,7 +136,7 @@ Run corresponding .scala files in spark-shell.
 
 
 
-##### Happiness Index Generator
+### Happiness Index Generator
 This file include the code used to generated the final regional happiness index value.
 
 **Input File Location**
@@ -150,7 +150,7 @@ Be sure that jar file and result.csv file are in the same file level, then run t
 
 
 
-#### dateUDFs : ($PROJECTROOT)/DateUDFs
+## dateUDFs : ($PROJECTROOT)/DateUDFs
 
 Contains the common date related hive UDF functions.
 
@@ -163,7 +163,7 @@ Contains the common date related hive UDF functions.
 
 
 
-### Credits
+## Credits
 
 The java version of VADER is based on Nuno A. C. Henriques's project [nunoachenriques.net]
 
