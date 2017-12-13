@@ -54,8 +54,8 @@ TwitterSentiment contains two parts:
    Then the .jar package which contains sentiment module will be on HDFS 
 
 2. A Hive SQL command file that perform sentiment analytic on tweets, and calcualte the
-normalized average happyness polarity on differenct workdays an different day hours.
-It also create a table which contains geolocation and sentiment score for further use.
+  normalized average happyness polarity on differenct workdays an different day hours.
+  It also create a table which contains geolocation and sentiment score for further use.
 
    Run `($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment/sentiment_hive_command.sql` using Hive.
 
@@ -71,7 +71,7 @@ Run `($PROJECTROOT)/SingleSourceAnalytic/NYCCrimeAnalyzer/nyccrime_hive_command.
 
 ##### 311Analyzer(@Shiyao Lei)
 
-Describe the usage here(@Shiyao Lei)
+Analyze the relationship between the amount of 311Complaints and the specific day of one week, the time in one day and the location.
 
 #### CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
 
@@ -81,6 +81,13 @@ TwitterKmeans.scala includes codes that train model for tweets clusting based on
 
 **How to run?**
 Copy the code to the spark-shell.
+
+##### ScoreGenerator
+This file include the code used to generated the final score for each clustering area.
+
+**How to run?**
+Compile and run `.java` file. (Need import *Apache Commons Mathematics Library*)
+
 
 
 #### dateUDFs : ($PROJECTROOT)/DateUDFs
