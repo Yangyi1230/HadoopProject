@@ -136,7 +136,11 @@ Run corresponding .scala files in spark-shell.
 ##### Happiness Index Generator
 This file include the code used to generated the final regional happiness index value.
 
+**Input File Location**
+Dumbo: `hc2416/RBDA/result.csv`
+
 **How to run?**
+Be sure that jar file and result.csv file are in the same file level, then run the following command
 `java -jar ScoreGenerator-1.0-SNAPSHOT-shaded.jar`
 
 
