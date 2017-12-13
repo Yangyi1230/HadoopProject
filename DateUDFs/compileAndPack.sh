@@ -13,4 +13,3 @@ hdfs dfs -rm DateUDF.jar
 
 hdfs dfs -put DateUDF.jar
 
-rm ./DateUDF.jar
