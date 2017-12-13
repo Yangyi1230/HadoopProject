@@ -27,7 +27,7 @@ The project contains four parts of codes:
 #### DataCollectParse: ($PROJECTROOT)/DataCollectParse
 
 
-##### TwitterCollector:
+##### 1.TwitterCollector:
 TwitterCollector is a tool used to collect tweets through Twitter Streamline API. 
 Specifically, only tweets posted at NYC with geolocation info will be collected. 
 
@@ -37,7 +37,7 @@ To run the collector, simply type `java -jar filename.jar`
 
 
 
-##### 311Parser:
+##### 2.311Parser:
 
 Profile the row data and clean out the irrelevant data information. Extract the 
 unique key, created time, complaint type, longitude and latitude. Also filter 
@@ -51,7 +51,7 @@ out the transactions with missing fields.
 
 
 
-##### NYCCrimeParser:
+##### 3.NYCCrimeParser:
 
 profile the row data and clean out the irrelevant data information. Extract the 
 unique key, create date\&time, law category, longitude and latitude. Also filter 
@@ -68,7 +68,7 @@ out the transactions with missing fields.
 
 #### SingleSourceAnalytic: ($PROJECTROOT)/SingleSourceAnalytic
 
-##### TwitterSentiment:
+##### 1.TwitterSentiment:
 
 TwitterSentiment contains two parts:
 1. Build java version of the python package VADER, and create a UDF in Hive.
@@ -89,7 +89,7 @@ TwitterSentiment contains two parts:
 
 
 
-##### NYCCrimeAnalyzer
+##### 2.NYCCrimeAnalyzer
 
 Analyze the relationship between the amount of NYC Crime complaints and 
 the specific day of one week or time in one day. 
@@ -100,7 +100,7 @@ Run `($PROJECTROOT)/SingleSourceAnalytic/NYCCrimeAnalyzer/nyccrime_hive_command.
 
 
 
-##### 311Analyzer
+##### 3.311Analyzer
 
 Analyze the relationship between the amount of 311Complaints and the specific day of one week, the time in one day and the location.
 
@@ -127,8 +127,10 @@ Copy the code to the spark-shell.
 
 Classify the profield data into the clusters generated above.
 
-**How to run?**
+**Input File Location**
+Dumbo HDFS: `/user/hc2416/output.csv`
 
+**How to run?**
 Run corresponding .scala files in spark-shell.
 
 
