@@ -23,7 +23,7 @@ All the `.sh` shell scripts can be run in this position
  
 Simply because this is where I created and maintained them:P
 
-Well I tried to make all the paths in codes/scripts absolute paths, 
+Well I tried to make all the data source paths in codes/scripts absolute paths, 
 but I am not so sure whether I fixed all the paths/authority issues.
 
 
