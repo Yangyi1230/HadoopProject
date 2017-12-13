@@ -117,8 +117,10 @@ Run `($PROJECTROOT)/SingleSourceAnalytic/311Analyzer/311data_hive_command.sql` u
 
 TwitterKmeans.scala includes codes that train model for tweets clusting based on geolocation info.
 
-**How to run?**
+**Input File Location**
+Dumbo HDFS: `/user/hc2416/output.csv`
 
+**How to run?**
 Copy the code to the spark-shell.
 
 
@@ -127,8 +129,7 @@ Copy the code to the spark-shell.
 
 Classify the profield data into the clusters generated above.
 
-**Input File Location**
-Dumbo HDFS: `/user/hc2416/output.csv`
+
 
 **How to run?**
 Run corresponding .scala files in spark-shell.
