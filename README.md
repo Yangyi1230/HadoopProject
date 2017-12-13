@@ -15,6 +15,17 @@ and foucusing mainly in three indicators which are safety, environment, and
 residents' happiness level.
 
 
+## Note To Graders
+
+The project repo is on DUMBO: `/home/dd2645/HadoopProject`
+
+All the `.sh` shell scripts can be run in this position
+ 
+Simply because this is where I created and maintained them:P
+
+Well I tried to make all the paths in codes/scripts absolute paths, 
+but I am not so sure whether I fixed all the paths/authority issues.
+
 
 
 ## Usage
@@ -26,6 +37,7 @@ The project contains four parts of codes:
 
 ## DataCollectParse: ($PROJECTROOT)/DataCollectParse
 
+This part contains the data Collect/ETL codes
 
 ### 1.TwitterCollector:
 TwitterCollector is a tool used to collect tweets through Twitter Streamline API. 
@@ -49,6 +61,10 @@ out the transactions with missing fields.
 
 `./compileAndRun.sh`
 
+**Input File Location**
+
+DUMBO HDFS: `/user/dd2645/311data/311.csv`
+
 
 
 ### 3.NYCCrimeParser:
@@ -62,6 +78,10 @@ out the transactions with missing fields.
 `cd ($PROJECTROOT/DataCollectParse/NYCCrimeParser)`
 
 `./compileAndRun.sh`
+
+**Input File Location**
+
+DUMBO HDFS: `/user/dd2645/crimedata/NYCCrimeRaw.csv`
 
 
 
@@ -77,7 +97,7 @@ TwitterSentiment contains two parts:
 
    `./compileAndPack.sh`
 
-   Then the .jar package which contains sentiment module will be on HDFS 
+   Then the .jar package which contains sentiment module will be on HDFS
 
 2. A Hive SQL command file that perform sentiment analytic on tweets, and calcualte the
   normalized average happyness polarity on differenct workdays an different day hours.
@@ -86,6 +106,10 @@ TwitterSentiment contains two parts:
    Run `($PROJECTROOT)/SingleSourceAnalytic/TwitterSentiment/sentiment_hive_command.sql` using Hive.
 
    Note: to use the hive commands, please first build `($PROJECTROOT)/DateUDFs`
+
+**Input File Location**
+
+DUMBO HDFS: `/user/dd2645/tweetOrigin`
 
 
 
@@ -98,6 +122,12 @@ the specific day of one week or time in one day.
 
 Run `($PROJECTROOT)/SingleSourceAnalytic/NYCCrimeAnalyzer/nyccrime_hive_command.sql` using Hive.
 
+Note: to use the hive commands, please first build `($PROJECTROOT)/DateUDFs`
+
+**Input File Location**
+
+DUMBO HDFS: `/user/dd2645/crimedata/washed`
+
 
 
 ### 3.311Analyzer
@@ -108,6 +138,13 @@ Analyze the relationship between the amount of 311Complaints and the specific da
 
 Run `($PROJECTROOT)/SingleSourceAnalytic/311Analyzer/311data_hive_command.sql` using Hive.
 
+Note: to use the hive commands, please first build `($PROJECTROOT)/DateUDFs`
+
+**Input File Location**
+
+DUMBO HDFS:
+
+/user/dd2645/311data/output2
 
 
 
@@ -129,6 +166,21 @@ Copy the code to the spark-shell.
 
 Classify the profield data into the clusters generated above.
 
+**Input File Location**
+
+DUMBO HDFS:
+
+`/user/dd2645/311data/output2/part-r-*`
+
+`/user/dd2645/SparkInput/crime.csv`
+
+`/user/dd2645/SparkInput/sentiment.csv`
+
+**Model Location**
+
+DUMBO HDFS:
+
+`/user/dd2645/KMeansModel`
 
 
 **How to run?**
@@ -145,7 +197,6 @@ Dumbo: `hc2416/RBDA/result.csv`
 **How to run?**
 Be sure that jar file and result.csv file are in the same file level, then run the following command
 `java -jar ScoreGenerator-1.0-SNAPSHOT-shaded.jar`
-
 
 
 

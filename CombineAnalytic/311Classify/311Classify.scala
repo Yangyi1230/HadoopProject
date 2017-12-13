@@ -3,7 +3,7 @@
 import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
 import org.apache.spark.mllib.linalg.Vectors
 
-val data = sc.textFile("311data/output2/part-r-*")
+val data = sc.textFile("/user/dd2645/311data/output2/part-r-*")
 
 val dataArray = data.map(s => s.split('\t'))
 
