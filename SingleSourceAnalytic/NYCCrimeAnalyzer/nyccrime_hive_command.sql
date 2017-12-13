@@ -33,6 +33,8 @@ select weekday, COUNT(id) from
 from profilednyccrime) tmp1
 group by weekday;
 
+drop table nyccrimetime;
+
 create table nyccrimetime as
 select time, COUNT(id) from
 (select id, substr(time,1,2) time

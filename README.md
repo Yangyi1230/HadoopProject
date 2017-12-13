@@ -88,6 +88,8 @@ DUMBO HDFS: `/user/dd2645/crimedata/NYCCrimeRaw.csv`
 
 ## SingleSourceAnalytic: ($PROJECTROOT)/SingleSourceAnalytic
 
+Analytics based on single source data
+
 ### 1.TwitterSentiment:
 
 TwitterSentiment contains two parts:
@@ -144,11 +146,13 @@ Note: to use the hive commands, please first build `($PROJECTROOT)/DateUDFs`
 
 DUMBO HDFS:
 
-/user/dd2645/311data/output2
+`/user/dd2645/311data/output2`
 
 
 
 ## CombineAnalytic: ($PROJECTROOT)/CombineAnalytic
+
+Analytics based on the combination of multi-data sources
 
 ### TwitterClustering:
 
