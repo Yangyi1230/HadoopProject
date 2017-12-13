@@ -1,7 +1,7 @@
 import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
 import org.apache.spark.mllib.linalg.Vectors
 
-val data = sc.textFile("output.csv")
+val data = sc.textFile("/user/hc2416/output.csv")
 val parsedData = data.map(s => Vectors.dense(s.split(',').map(_.toDouble))).cache()
 
 val numClusters = 100
