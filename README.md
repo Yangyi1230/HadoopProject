@@ -4,15 +4,19 @@ Created by Dayou Du, Shiyao Lei, Hao Chen at New York University
 
 ## Introduction
 
-Neighborhood quality has always been difficult to quantify. Tranditionally, 
-neighborhood quality are measured by using the data from housing survey and 
-urban development cusyomer satisfication survey. In this paper, we analyze 
-the neighborhood quality and livibility based on three data source which are 
-311 Service Requests, NYPD Complaint Data Historic and geolocation based twitter 
-sentiment analysis. Investifations of neighborhood quality often relate to 
-various indicators. Combining these three data with geological information 
-and foucusing mainly in three indicators which are safety, environment, and 
-residents' happiness level.
+Happiness Index has always been difficult to measure, because it could be 
+influnced by a lot of filelds and it also involves a large amount of data 
+analysis. Traditionally, Happiness Index are measured by using the data from 
+nationwide  survey which would consume a lot of human and material resources. 
+In this project, we analyzed the Happiness Index combining MapReduce framwork 
+and a distributed database model. We used Apache Hadoop MapReduce, Apache Hive 
+and Apache Spark to profile and integrate our three data sources, which are 
+311 Service Requests, NYPD Complaint Data Historic and geo-location based 
+twitter sentiment analysis. Investigations of Happiness often relate to various 
+indicators. We combined these three data with geological information and mainly 
+focus on three indicators, which are safety, environment, and the sentiment 
+revealed in Twitter.
+
 
 
 ## Note To Graders
